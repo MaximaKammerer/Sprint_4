@@ -3,7 +3,8 @@ package ru.yandex.scooter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-
+import ru.yandex.scooter.OrderPage;
+import ru.yandex.scooter.MainPage;
 
 
 public class OrderPage {
