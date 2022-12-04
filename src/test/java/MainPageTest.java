@@ -6,6 +6,7 @@ import org.junit.runners.Parameterized;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -51,12 +52,12 @@ public class MainPageTest {
     @Test
     public void checkActivity() {
         //Для запуска через Chrome
-        //WebDriver driver = new ChromeDriver();
+        WebDriver driver = new ChromeDriver();
 
 
         //Для запуска Firefox
-        WebDriverManager.firefoxdriver().setup();
-        WebDriver driver = new FirefoxDriver();
+        // WebDriverManager.firefoxdriver().setup();
+       // WebDriver driver = new FirefoxDriver();
 
         MainPage objMainPage = new MainPage(driver);
         driver.get(URL);
