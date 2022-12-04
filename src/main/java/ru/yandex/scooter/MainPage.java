@@ -7,7 +7,7 @@ public class MainPage {
     private static WebDriver driver;
     public static final String URL = "https://qa-scooter.praktikum-services.ru/";
 
-    //1-й Вопрос. Сколько это стоит
+    //Вопросы о важном
 
     public final static By howToPay = By.xpath(".//div[@id = 'accordion__heading-0']");
     public final static By TextHowToPay = By.xpath(".//div[@aria-labelledby = 'accordion__heading-0']/p");
