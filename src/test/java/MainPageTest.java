@@ -50,7 +50,7 @@ public class MainPageTest {
 
 
     @Test
-    public void checkActivity() {
+    public void checkAnswers() {
         //Для запуска через Chrome
         WebDriver driver = new ChromeDriver();
 

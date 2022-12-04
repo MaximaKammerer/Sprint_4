@@ -46,7 +46,7 @@ public class TetsOrderPage {
     }
 
     @Test
-    public void checkActivity() {
+    public void CreateOrder() {
         //Для запуска через Chrome
         //WebDriver driver = new ChromeDriver();
         //Для запуска Firefox
