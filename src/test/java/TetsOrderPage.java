@@ -52,7 +52,9 @@ public class TetsOrderPage {
 
     @Test
     public void checkActivity() {
+        //Для запуска через Chrome
         //WebDriver driver = new ChromeDriver();
+        //Для запуска Firefox
         WebDriverManager.firefoxdriver().setup();
         WebDriver driver = new FirefoxDriver();
         MainPage objMainPage = new MainPage(driver);
