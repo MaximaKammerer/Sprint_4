@@ -1,10 +1,25 @@
 package ru.yandex.scooter;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class MainPage {
-    private static WebDriver driver;
+    public static WebDriver driver;
+    @Before
+    public static WebDriver getDriver() {
+        //Для запуска в CHROME
+        //WebDriver driver = new ChromeDriver();
+
+        //Для запуска в Firefox
+         WebDriverManager.firefoxdriver().setup();
+        WebDriver driver = new FirefoxDriver();
+
+         return driver;
+    }
     public static final String URL = "https://qa-scooter.praktikum-services.ru/";
 
     //Вопросы о важном
@@ -50,5 +65,8 @@ public class MainPage {
     public MainPage(WebDriver driver) {
         this.driver = driver;
     }
+
+
+
 
 }

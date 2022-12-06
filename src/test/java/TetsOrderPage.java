@@ -1,5 +1,6 @@
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -25,6 +26,7 @@ public class TetsOrderPage {
     private String number;
     private String comment;
     private By color;
+    public WebDriver driver = MainPage.getDriver();
 
     public TetsOrderPage(String name, String serName, String address, String metrostantion, String number, String comment, By color) {
         this.name = name;
@@ -46,12 +48,8 @@ public class TetsOrderPage {
     }
 
     @Test
-    public void checkActivity() {
-        //Для запуска через Chrome
-        //WebDriver driver = new ChromeDriver();
-        //Для запуска Firefox
-        WebDriverManager.firefoxdriver().setup();
-        WebDriver driver = new FirefoxDriver();
+    public void CreateOrder() {
+
 
         MainPage objMainPage = new MainPage(driver);
         OrderPage objOrderPage = new OrderPage(driver);
@@ -59,6 +57,11 @@ public class TetsOrderPage {
         objMainPage.CloseCookei();
         objMainPage.ClickOnOrder();
         objOrderPage.TakeOrder(name, serName, address, metrostantion, number, comment, color);
+
+        driver.quit();
+    }
+    @After
+    public void teardown() {
 
         driver.quit();
     }
